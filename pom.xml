@@ -41,9 +41,17 @@
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>1.2.41</version>
         </dependency>
-        
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test</artifactId>
+            <version>1.2.41</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>src/test/kotlin</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -51,6 +59,23 @@
             </plugin>
             <plugin>
                 <artifactId>kotlin-maven-plugin</artifactId>
+                <version>1.2.41</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <configuration>
                     <args>
@@ -60,6 +85,7 @@
                         <plugin>spring</plugin>
                     </compilerPlugins>
                     <experimentalCoroutines>enable</experimentalCoroutines>
+                    <jvmTarget>1.8</jvmTarget>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -122,4 +148,5 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
+
 </project>
