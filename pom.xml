@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.kyzylsy</groupId>
     <artifactId>cryptography-helper</artifactId>
@@ -33,7 +35,8 @@
     <scm>
         <connection>scm:git:https://github.com/kyzylsy/cryptography-helper.git</connection>
         <url>https://github.com/kyzylsy/cryptography-helper.git</url>
-        <developerConnection>scm:git:https://github.com/kyzylsy/cryptography-helper.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/kyzylsy/cryptography-helper.git
+        </developerConnection>
     </scm>
 
     <dependencies>
@@ -53,18 +56,6 @@
     <build>
         <sourceDirectory>src/main/kotlin</sourceDirectory>
         <testSourceDirectory>src/test/kotlin</testSourceDirectory>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.3</version>
-                    <configuration>
-                        <goals>dokka:javadocJar deploy</goals>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
             <plugin>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -112,7 +103,7 @@
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
                     <releaseProfiles>release</releaseProfiles>
-                    <goals>deploy</goals>
+                    <goals>dokka:javadocJar deploy</goals>
                 </configuration>
             </plugin>
             <plugin>
