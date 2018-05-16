@@ -1,11 +1,11 @@
 cryptography-helper
 ===================
 
-## some useful utilities of common encryption algorithms in Kotlin
+some useful utilities of common encryption algorithms in Kotlin
 
-Public-key cryptography
+### Public-key ###
 * RSA supported
   
-Symmetric-key
+### Symmetric-key ###
 * AES planning
 * Skipjack planning
